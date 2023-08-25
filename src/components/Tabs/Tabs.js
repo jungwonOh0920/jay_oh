@@ -9,9 +9,8 @@ const Tabs = ({children, active = 0}) => {
         let data = []
 
         React.Children.forEach(children, child => {
-            if (!React.isValidElement(child)) return;
+            if (!React.isValidElement(child)) return
             const {children} = child.props
-            console.log(child)
             data.push(children)
         })
 
@@ -19,19 +18,25 @@ const Tabs = ({children, active = 0}) => {
     }, [children])
 
     useEffect(() => {
-        console.log('children: ', children)
+        console.log('tabsData: ', tabsData);
+    }, [tabsData])
+
+    useEffect(() => {
+        setActiveTab(active)
     }, [])
 
     return (
         <div className='tabs-container'>
             <div className="sections-container">
                 {
-                    children.map((_, idx) => <button key={idx}>section {idx + 1}</button>)
+                    children.map((_, idx) => <button key={idx} onClick={() => {setActiveTab(idx)}}>Section {idx + 1}</button>)
                 }
             </div>
-            <div className="contents">{
-                tabsData.map((content, idx) => content)
-            }</div>
+            <div className="contents">
+                {
+                    tabsData.map((content, idx) => activeTab === idx ? content : null)
+                }
+            </div>
         </div>
     )
 }
