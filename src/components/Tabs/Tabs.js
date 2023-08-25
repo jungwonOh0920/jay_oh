@@ -23,7 +23,7 @@ const Tabs = ({children, active = 0}) => {
 
     useEffect(() => {
         setActiveTab(active)
-    }, [])
+    }, [active])
 
     return (
         <div className='tabs-container'>
