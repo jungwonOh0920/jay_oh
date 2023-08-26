@@ -18,10 +18,6 @@ const Tabs = ({children, active = 0}) => {
     }, [children])
 
     useEffect(() => {
-        console.log('tabsData: ', tabsData);
-    }, [tabsData])
-
-    useEffect(() => {
         setActiveTab(active)
     }, [active])
 

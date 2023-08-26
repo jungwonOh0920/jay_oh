@@ -1,0 +1,19 @@
+.article {
+    display: block;
+}
+
+.article.ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.read-more {
+    border: none;
+    border-bottom: 1px solid var(--purple);
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}

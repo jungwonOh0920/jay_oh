@@ -1,1 +1,21 @@
-.mario-container {}
+.img-container {
+    width: 480px;
+}
+
+.inner-wrapper {
+    max-width: 600px;
+    background-color: yellow;
+}
+
+.img-ratio {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
