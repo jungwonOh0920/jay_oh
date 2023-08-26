@@ -1,4 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react'
+import Button from '../Button/Button'
 import './article.css'
 
 const Article = ({children}) => {
@@ -28,8 +29,8 @@ const Article = ({children}) => {
                 {children}
             </p>
             {isEllipsis ?
-                <button className='read-more' onClick={() => {setShowFull(!showFull)}}> {showFull ? 'Read Less' : 'Read More'}
-                </button> : null}
+                <Button type='underline' size='sm' onClick={() => {setShowFull(!showFull)}}> {showFull ? 'Read Less' : 'Read More'}
+                </Button> : null}
         </>
     )
 }

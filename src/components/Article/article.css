@@ -10,10 +10,10 @@
     text-overflow: ellipsis;
 }
 
-.read-more {
+/* .read-more {
     border: none;
     border-bottom: 1px solid var(--purple);
     background-color: transparent;
     padding: 0;
     cursor: pointer;
-}
+} */
