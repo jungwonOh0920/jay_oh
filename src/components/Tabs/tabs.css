@@ -16,7 +16,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: gray;
+    background-color: var(--darkergray);
     overflow: hidden;
     width: 100%;
     transition: width .3s;
@@ -70,7 +70,7 @@
     right: 0;
 }
 
-/* Styling when screensize is bigger than the tablet size */
+/* Styling for desktop */
 @media (min-width: 720px) {
     .section-titles-outer-container {
         padding-top: 24px;
