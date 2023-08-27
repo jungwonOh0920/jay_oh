@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from 'react'
+import {FiX} from "react-icons/fi"
+import Button from '../Button/Button'
 import './tabs.css'
 
-const Tabs = ({children, active = 0}) => {
+const Tabs = ({children, active = 0, isMobile = false}) => {
     const [activeTab, setActiveTab] = useState(0)
     const [tabsData, setTabsData] = useState([])
+    const [AreTabsHidden, setAreTabsHidden] = useState(false)
 
     useEffect(() => {
         let data = []
@@ -21,9 +24,19 @@ const Tabs = ({children, active = 0}) => {
         setActiveTab(active)
     }, [active])
 
+    useEffect(() => {
+
+    }, [isMobile])
+
     return (
         <div className='tabs-container'>
             <div className="sections-container">
+                {
+                    isMobile ?
+                        <div className='close-btn-container'>
+                            <Button type='img'><FiX /></Button>
+                        </div> : null
+                }
                 {
                     children.map((_, idx) => <button key={idx} className={`${idx === activeTab ? 'active' : null}`} onClick={() => {setActiveTab(idx)}}>Section {idx + 1}</button>)
                 }

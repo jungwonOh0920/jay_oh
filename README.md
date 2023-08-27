@@ -37,8 +37,8 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 
 ### Things I've done
 
-Using Classnames utility for conditionally joining classNames together. Ex) Button Component
+Using Classnames utility for conditionally joining classNames together. Ex) `Button` Component
 
-Using `react-icons` for search icon on `searchInput` component.
+Used some icons from `react-icons` for `searchInput` component and `Hamburger Menu` for mobile.
 
 

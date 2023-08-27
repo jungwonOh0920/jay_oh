@@ -9,6 +9,7 @@
     padding: 60px 0 20px;
     margin: 0;
     border-right: 2px solid var(--darkgray);
+    position: relative;
 }
 
 .sections-container button {
@@ -29,6 +30,12 @@
     background-color: var(--gray);
     flex: 1;
     padding: 24px 0 0 48px;
+}
+
+.close-btn-container {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 /* Most Common Tablet Screen Width according to https://www.hobo-web.co.uk/best-screen-size/ */

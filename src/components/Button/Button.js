@@ -6,6 +6,7 @@ const Button = ({type = 'button', size = 'md', onClick, children}) => {
     const buttonClass = classNames({
         button: true,
         'fill': type === 'fill',
+        'img': type === 'img',
         'underline': type === 'underline',
         'sm': size === 'sm'
     })
