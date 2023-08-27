@@ -1,7 +1,7 @@
 .tabs-container {
     display: flex;
     height: 100%;
-    /* position: relative; */
+    overflow: hidden;
 }
 
 .menu-btn-container {
@@ -10,47 +10,58 @@
     top: 0;
 }
 
-.section-titles-outer-container {
+.section-titles-mobile-outer-container {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: gray;
+    overflow: hidden;
+    width: 100%;
+    transition: width .3s;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hidden {
+    width: 0;
+    overflow: hidden;
 }
 
 .section-titles-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 60px 0 20px;
     margin: 0;
-    border-right: 2px solid var(--darkgray);
-    position: relative;
-}
-
-.section-titles-container.hidden {
-    display: none
 }
 
 .section-titles-container button {
     padding: 8px 2px;
-    text-align: left;
+    text-align: center;
     cursor: pointer;
     border: none;
-    background-color: var(--white);
+    color: var(--white);
     font-weight: 600;
-    font-size: 12px;
+    background-color: transparent;
+}
+
+.section-titles-container *+* {
+    margin-top: 24px;
 }
 
 .section-titles-container button.active,
 .section-titles-container button:hover {
     background-color: var(--lightgray);
+    color: var(--black);
 }
 
 .contents {
     background-color: var(--gray);
     flex: 1;
     padding: 0;
+    height: 100%;
 }
 
 .close-btn-container {
@@ -60,18 +71,28 @@
 }
 
 /* Styling when screensize is bigger than the tablet size */
-@media (min-width: 768px) {
-    .section-titles-container {
+@media (min-width: 720px) {
+    .section-titles-outer-container {
+        padding-top: 24px;
         min-width: 360px;
         height: 100%;
     }
 
+    .section-titles-container {
+        padding-top: 24px;
+    }
+
     .section-titles-container button {
+        color: var(--black);
+        background-color: var(--white);
         padding: 16px 0 16px 24px;
         font-weight: bold;
+        text-align: left;
     }
 
     .contents {
-        padding: 24px 0 0 48px;
+        border-left: 1px solid var(--darkgray);
+        padding-top: 24px;
+        padding-left: 48px;
     }
 }

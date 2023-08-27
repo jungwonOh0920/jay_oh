@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
-import {FiX} from "react-icons/fi"
 import Button from '../Button/Button'
+import {FiX} from "react-icons/fi"
 import {FiMenu} from 'react-icons/fi'
 import classNames from 'classnames'
 import './tabs.css'
@@ -11,12 +11,13 @@ const Tabs = ({children, active = 0, isMobile = false}) => {
     const [AreSectionsHidden, setAreSectionsHidden] = useState(false)
 
     const sectionClassnames = classNames(
-        'section-titles-container',
-        {'hidden': AreSectionsHidden}
+        'section-titles-container'
     )
 
     const sectionOuterClassnames = classNames(
-        {'section-titles-outer-container': isMobile && !AreSectionsHidden}
+        {'section-titles-mobile-outer-container': isMobile && !AreSectionsHidden},
+        {'section-titles-outer-container': !isMobile},
+        {'hidden': AreSectionsHidden}
     )
 
     useEffect(() => {
@@ -36,9 +37,12 @@ const Tabs = ({children, active = 0, isMobile = false}) => {
     }, [active])
 
     useEffect(() => {
-
         isMobile ? setAreSectionsHidden(true) : setAreSectionsHidden(false)
     }, [isMobile])
+
+    useEffect(() => {
+        console.log('check: ', AreSectionsHidden);
+    }, [AreSectionsHidden])
 
     const handleSectionTitleClick = (idx) => {
         setActiveTab(idx)
@@ -60,13 +64,13 @@ const Tabs = ({children, active = 0, isMobile = false}) => {
 
             {/* Section Titles */}
             <div className={sectionOuterClassnames}>
+                {
+                    isMobile && !AreSectionsHidden ?
+                        <div className='close-btn-container'>
+                            <Button type='img' onClick={() => {setAreSectionsHidden(true)}}><FiX /></Button>
+                        </div> : null
+                }
                 <div className={sectionClassnames}>
-                    {
-                        isMobile && !AreSectionsHidden ?
-                            <div className='close-btn-container'>
-                                <Button type='img' onClick={() => {setAreSectionsHidden(true)}}><FiX /></Button>
-                            </div> : null
-                    }
                     {
                         children.map((_, idx) => <button key={idx} className={`${idx === activeTab ? 'active' : ''}`} onClick={() => {handleSectionTitleClick(idx)}}>Section {idx + 1}</button>)
                     }
