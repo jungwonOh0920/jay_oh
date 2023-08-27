@@ -1,9 +1,25 @@
 .tabs-container {
     display: flex;
     height: 100%;
+    /* position: relative; */
 }
 
-.sections-container {
+.menu-btn-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.section-titles-outer-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: gray;
+}
+
+.section-titles-container {
     display: flex;
     flex-direction: column;
     padding: 60px 0 20px;
@@ -12,24 +28,29 @@
     position: relative;
 }
 
-.sections-container button {
-    padding: 8px 16px;
+.section-titles-container.hidden {
+    display: none
+}
+
+.section-titles-container button {
+    padding: 8px 2px;
     text-align: left;
     cursor: pointer;
     border: none;
     background-color: var(--white);
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 12px;
 }
 
-.sections-container button.active,
-.sections-container button:hover {
+.section-titles-container button.active,
+.section-titles-container button:hover {
     background-color: var(--lightgray);
 }
 
 .contents {
     background-color: var(--gray);
     flex: 1;
-    padding: 24px 0 0 48px;
+    padding: 0;
 }
 
 .close-btn-container {
@@ -38,13 +59,19 @@
     right: 0;
 }
 
-/* Most Common Tablet Screen Width according to https://www.hobo-web.co.uk/best-screen-size/ */
+/* Styling when screensize is bigger than the tablet size */
 @media (min-width: 768px) {
-    .sections-container {
+    .section-titles-container {
         min-width: 360px;
+        height: 100%;
     }
 
-    .sections-container button {
+    .section-titles-container button {
         padding: 16px 0 16px 24px;
+        font-weight: bold;
+    }
+
+    .contents {
+        padding: 24px 0 0 48px;
     }
 }

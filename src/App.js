@@ -22,6 +22,7 @@ function App() {
 
   useEffect(() => {
     window.addEventListener('resize', handleResize)
+    handleResize()
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
@@ -34,12 +35,12 @@ function App() {
         <Tabs.TabPane><Mario /></Tabs.TabPane>
         <Tabs.TabPane><Luigi /></Tabs.TabPane>
       </Tabs>
-      {
+      {/* {
         isMobile ?
           <div className='menu-btn-container'>
-            <Button type='img'><FiMenu /></Button>
+            <Button type='img' onClick={}><FiMenu /></Button>
           </div> : null
-      }
+      } */}
     </div>
   );
 }
