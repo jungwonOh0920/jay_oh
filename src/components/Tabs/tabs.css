@@ -1,43 +1,98 @@
 .tabs-container {
     display: flex;
     height: 100%;
+    overflow: hidden;
 }
 
-.sections-container {
+.menu-btn-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.section-titles-mobile-outer-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--darkergray);
+    overflow: hidden;
+    width: 100%;
+    transition: width .3s;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hidden {
+    width: 0;
+    overflow: hidden;
+}
+
+.section-titles-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 60px 0 20px;
     margin: 0;
-    border-right: 2px solid var(--darkgray);
 }
 
-.sections-container button {
-    padding: 8px 16px;
-    text-align: left;
+.section-titles-container button {
+    padding: 8px 2px;
+    text-align: center;
     cursor: pointer;
     border: none;
-    background-color: var(--white);
-    font-weight: bold;
+    color: var(--white);
+    font-weight: 600;
+    background-color: transparent;
 }
 
-.sections-container button.active,
-.sections-container button:hover {
+.section-titles-container *+* {
+    margin-top: 24px;
+}
+
+.section-titles-container button.active,
+.section-titles-container button:hover {
     background-color: var(--lightgray);
+    color: var(--black);
 }
 
 .contents {
     background-color: var(--gray);
     flex: 1;
-    padding: 24px 0 0 48px;
+    padding: 0;
+    height: 100%;
 }
 
-/* Most Common Tablet Screen Width according to https://www.hobo-web.co.uk/best-screen-size/ */
-@media (min-width: 768px) {
-    .sections-container {
+.close-btn-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Styling for desktop */
+@media (min-width: 720px) {
+    .section-titles-outer-container {
+        padding-top: 24px;
         min-width: 360px;
+        height: 100%;
     }
 
-    .sections-container button {
+    .section-titles-container {
+        padding-top: 24px;
+    }
+
+    .section-titles-container button {
+        color: var(--black);
+        background-color: var(--white);
         padding: 16px 0 16px 24px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .contents {
+        border-left: 1px solid var(--darkgray);
+        padding-top: 24px;
+        padding-left: 48px;
     }
 }

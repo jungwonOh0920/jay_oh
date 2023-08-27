@@ -25,6 +25,24 @@
     color: var(--purple);
 }
 
+.button.img {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button.img svg {
+    width: 24px;
+    height: 24px;
+    color: var(--black);
+}
+
 .button.sm {
     max-width: 100px;
     width: fit-content;

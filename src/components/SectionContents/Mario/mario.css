@@ -1,5 +1,9 @@
+.mario-container {
+    height: 100%;
+}
+
 .img-container {
-    width: 480px;
+    width: 100%;
 }
 
 .inner-wrapper {
@@ -21,9 +25,23 @@ img {
 
 .buttons-section {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 24px;
 }
 
 .buttons-section *+* {
-    margin-left: 8px;
+    margin-top: 18px;
+}
+
+@media (min-width: 720px) {
+    .buttons-section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .buttons-section *+* {
+        margin-top: 0;
+        margin-left: 8px;
+    }
 }

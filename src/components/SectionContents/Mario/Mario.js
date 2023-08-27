@@ -1,8 +1,8 @@
 import React from 'react'
 import SearchInput from '../../SearchInput/SearchInput'
 import Article from '../../Article/Article'
-import './mario.css'
 import Button from '../../Button/Button'
+import './mario.css'
 
 const Mario = () => {
     return (
@@ -18,7 +18,7 @@ const Mario = () => {
                 <p>05/01/22</p>
                 <h2>Title copy Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, praesentium!</h2>
                 <Article>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur adipisicing elit id111
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur adipisicing elit id111
                 </Article>
                 <div className='buttons-section'>
                     <Button type='fill' onClick={() => {alert('Button component with the fill type')}}>Button</Button>
