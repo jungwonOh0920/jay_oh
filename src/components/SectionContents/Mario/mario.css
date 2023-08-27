@@ -1,1 +1,29 @@
-.mario-container {}
+.img-container {
+    width: 480px;
+}
+
+.inner-wrapper {
+    max-width: 600px;
+}
+
+.img-ratio {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.buttons-section {
+    display: flex;
+    margin-top: 24px;
+}
+
+.buttons-section *+* {
+    margin-left: 8px;
+}

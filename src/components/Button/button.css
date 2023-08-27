@@ -1,0 +1,31 @@
+.button {
+    padding: 10px 32px;
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--white);
+    color: var(--blue);
+    font-size: 16px;
+    border: 2px solid var(--blue);
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button.fill {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.button.underline {
+    border: none;
+    border-bottom: 1px solid var(--purple);
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0;
+    color: var(--purple);
+}
+
+.button.sm {
+    max-width: 100px;
+    width: fit-content;
+}
