@@ -25,7 +25,7 @@ const Tabs = ({children, active = 0}) => {
         <div className='tabs-container'>
             <div className="sections-container">
                 {
-                    children.map((_, idx) => <button key={idx} onClick={() => {setActiveTab(idx)}}>Section {idx + 1}</button>)
+                    children.map((_, idx) => <button key={idx} className={`${idx === activeTab ? 'active' : null}`} onClick={() => {setActiveTab(idx)}}>Section {idx + 1}</button>)
                 }
             </div>
             <div className="contents">

@@ -20,10 +20,10 @@ const Mario = () => {
                 <Article>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur adipisicing elit id111
                 </Article>
-            </div>
-            <div className='buttons-section'>
-                <Button type='fill'>Button</Button>
-                <Button>Button</Button>
+                <div className='buttons-section'>
+                    <Button type='fill' onClick={() => {alert('Button component with the fill type')}}>Button</Button>
+                    <Button onClick={() => {alert('Default button type')}}>Button</Button>
+                </div>
             </div>
         </div>
     )
