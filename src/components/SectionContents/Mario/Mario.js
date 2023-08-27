@@ -1,8 +1,8 @@
 import React from 'react'
 import SearchInput from '../../SearchInput/SearchInput'
 import Article from '../../Article/Article'
-import './mario.css'
 import Button from '../../Button/Button'
+import './mario.css'
 
 const Mario = () => {
     return (

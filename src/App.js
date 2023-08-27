@@ -6,8 +6,6 @@ import Luigi from './components/SectionContents/Luigi/Luigi'
 import Zelda from './components/SectionContents/Zelda/Zelda'
 import Splatoon from './components/SectionContents/Splatoon/Splatoon'
 import Kirby from './components/SectionContents/Kirby/Kirby'
-import Button from './components/Button/Button'
-import {FiMenu} from 'react-icons/fi'
 
 function App() {
   const [isMobile, setIsMobile] = useState(false)
@@ -35,12 +33,6 @@ function App() {
         <Tabs.TabPane><Mario /></Tabs.TabPane>
         <Tabs.TabPane><Luigi /></Tabs.TabPane>
       </Tabs>
-      {/* {
-        isMobile ?
-          <div className='menu-btn-container'>
-            <Button type='img' onClick={}><FiMenu /></Button>
-          </div> : null
-      } */}
     </div>
   );
 }
