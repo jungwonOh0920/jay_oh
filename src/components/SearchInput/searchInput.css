@@ -9,16 +9,21 @@
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
 }
 
 input {
     flex: 1;
     border: none;
     border-bottom: 1.5px solid black;
-    padding: 4px 0 4px 20px;
+    padding: 4px 24px 4px 20px;
     background-color: transparent;
-    margin-left: -24px;
+    margin-left: -16px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
 }
 
 .select {
