@@ -3,16 +3,15 @@
 Hi, there. 👋 My name is Jay Oh and I'm glad to present my humble work to you today. 
 
 ## How to run the project
-1. On this page(https://github.com/jungwonOh0920/jay_oh), 
-2. Click the green `< >Code` button and click `Download ZIP`.
-3. After download it, open it with a code editor like Visual Studio Code. 
-4. If you don't have one, you can get VSCode here (https://code.visualstudio.com/)
-5. Then, go to terminal (or on VSCode, press `control` and `~` to open the terminal tab). Make sure you are on the right directory. 
-6. Install NPM packages
+1. On this page(https://github.com/jungwonOh0920/jay_oh), click the green `< >Code` button and click `Download ZIP`.
+2. After download it, open it with a code editor like Visual Studio Code. 
+3. If you don't have one, you can get VSCode here (https://code.visualstudio.com/)
+4. Then, go to terminal (or on VSCode, press `control` and `~` to open the terminal tab). Make sure you are on the right directory. 
+5. Install NPM packages
    ```sh
    npm install
    ``` 
-7. Run the project by typing the following and you will be able see it on localhost:3000
+6. Run the project by typing the following and you will be able see it on localhost:3000
    ```sh
    npm run start
    ```
@@ -21,16 +20,21 @@ Hi, there. 👋 My name is Jay Oh and I'm glad to present my humble work to you 
 ## About the project
 
 ### Design
-There are 5 section tabs on the left and contents changes accordingly. Default section is Section 4 which is the Mario content. 
+There are 5 section tabs on the left and the content changes accordingly on the right side. Default section is Section 4 which is the Mario content. 
 
 Desktop:
 ![Product Desktop][product-desktop]
 
-For the content section on desktop screen, those two buttons at the bottom are aligned with other contents unlike the original design. 
+What I did *differently*:
+- As mentioned in the instruction "welcome to add any flourishes you think would be appropriate for the design", I did something little different than the given design, and I've aligned bottom buttons with other contents above them.
 
-I have added the mobile version. When the screen size is small enough(less than 720px), the `hamburger menu bars` appear on the top right as the section titles are hidden. When it's clicked, the section titles appear from the left side. It collapes back when a section is clicked. 
 
-When hover the buttons, it expands a little bit to notify users just like the nintendo website. 😉
+What I did *additionally*:
+<br />
+- I have added the mobile version. When the screen size is small enough(less than 720px), the `hamburger menu bars` appear on the top right as the section titles are hidden. When it's clicked, the section titles appear from the left side. It collapes back when a section is clicked. 
+
+- When hover the buttons, it expands a little bit to notify users just like THE  WEBSITE. 👨🏻‍🔧🍄🐢
+
 
 Mobile Content Section:<br />
 ![Product mobile1][product-mobile1]
@@ -73,13 +77,13 @@ Ex) I'm using some icons in my `searchInput` component and `Hamburger Menu`
 <br />There is Mario content component that is a combination of text, image, and other components. Other content components are also filled with some placeholders and I added inline styling since it's just placeholders. 
 
 #### Comments
-First of all, I learned so much as I did this. It took me longer than I thought first. I learned 
-* it's important to have proper HTML element structure before styling. Took me so long to fix styling after I changed HTML structure 🥹
-* Typescript could've been better for prop types or any other data types because it can be messed up easily without declaring datatypes explicitly. 
-* Something new - Component Composition with Dot Notation Exports. I've seen it before like StyledComponent but never created one yet. I guess I didn't have to build `Tabs` component in this way, but I wanted to try it and it worked! 😁
-* Style guide is needed. When I though about responsiveness for this, I was lost. I used the hamburger menu, but I'm pretty sure there would be a better way to do it. So, for better user experience, it's important to work with UI/UX designers.
+Working on a new project always has learning points. What I learned: 
+* Having proper HTML elements structure helps us save time when styling. 🥹
+* Typescript could've been better for prop types or any other data types because without declaring datatypes explicitly, code could be messed up easily. 
+* Something new - Component Composition with Dot Notation Exports. I've seen it before like in `StyledComponent` but never created one yet. I guess I didn't have to write the `Tabs` component in this way, but I wanted to try it for learning purpose and it worked! 😁
+* A style guide is important. When I thought about responsiveness for this, I took me some time to figure out what's best for the mobile screen. I used the hamburger menu, but I'm pretty sure there would be a better way to do it. So, for better user experience, it's important to work with UI/UX designers.
 
-Thank you very much for your time and hope I can hear back soon from ya! 🤙
+Thank you very much for your time! 🤙
 
 [product-desktop]: src/assets/images/desktop.png
 [product-mobile1]: src/assets/images/mobile1.png
