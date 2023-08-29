@@ -9,6 +9,17 @@
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
+    position: relative;
+}
+
+.button:hover,
+.button.fill:hover {
+    transform: scaleX(1.05) scaleY(1.05) translateZ(0px);
+    transition: transform 0.2s linear;
+}
+
+.button.fill:hover {
+    background-color: var(--darkblue);
 }
 
 .button.fill {

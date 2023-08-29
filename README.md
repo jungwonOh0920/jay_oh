@@ -21,7 +21,7 @@ Hi, there. 👋 My name is Jay Oh and I'm glad to present my humble work to you 
 ## About the project
 
 ### Design
-There are 5 section tabs on the left and contents changes accordingly. Default section is Section 4 which is Mario contents. 
+There are 5 section tabs on the left and contents changes accordingly. Default section is Section 4 which is the Mario content. 
 
 Desktop:
 ![Product Desktop][product-desktop]
@@ -29,6 +29,8 @@ Desktop:
 For the content section on desktop screen, those two buttons at the bottom are aligned with other contents unlike the original design. 
 
 I have added the mobile version. When the screen size is small enough(less than 720px), the `hamburger menu bars` appear on the top right as the section titles are hidden. When it's clicked, the section titles appear from the left side. It collapes back when a section is clicked. 
+
+When hover the buttons, it expands a little bit to notify users just like the nintendo website. 😉
 
 Mobile Content Section:<br />
 ![Product mobile1][product-mobile1]
