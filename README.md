@@ -30,10 +30,10 @@ For the content section on desktop screen, those two buttons at the bottom are a
 
 I have added the mobile version. When the screen size is small enough(less than 720px), the `hamburger menu bars` appear on the top right as the section titles are hidden. When it's clicked, the section titles appear from the left side. It collapes back when a section is clicked. 
 
-Mobile Content Section:
+Mobile Content Section:<br />
 ![Product mobile1][product-mobile1]
 
-Mobile Section Title Section:
+Mobile Section Title Section: <br />
 ![Product mobile2][product-mobile2]
  
 
@@ -42,16 +42,16 @@ Mobile Section Title Section:
 #### Libraries I utilized
 1. `Classnames`
 <br />Classnames is a simple JavaScript utility for conditionally joining classNames together so that it helps for better readability. 
-Ex) `Tabs` component:
+Ex) I'm using it in my `Tabs` component:
 ![Product tabs][product-tabs]
 <br />Documentation: https://github.com/JedWatson/classnames#readme
 
 2. `React-icons`
 <br />It contains popular icons and they can be used like components.
-Ex) `searchInput` component or `Hamburger Menu` 
+Ex) I'm using some icons in my `searchInput` component and `Hamburger Menu` 
 <br />Documentation: https://github.com/react-icons/react-icons#readme
 
-#### Components
+#### Custom Components
 1. `Article`
 <br />`Article` component takes text as children and it is wrapped by `<p>` tag. This component can be useful when text is too long. It has `Read More` button that enables to do ellipsis text when it has more than 2 lines. 
 
@@ -64,7 +64,7 @@ Ex) `searchInput` component or `Hamburger Menu`
 4. `Tabs`
 <br /> It takes `active tab index` and `isMobile` as props. App component is its parent component and it should know if it is mobile size or not. The `active` prop decides which tab is initially active. In this case, section 4 is selected as a default. 
 <br /> The children components are expected to be wrapped by `TabPane` so that this component can handle both section titles and bodies.
-Ex) `Tabs` component:
+<br />Ex) `Tabs` component: <br />
 ![Product tabs-usage][product-tabs-usage]
 
 5. `SectionContents`
