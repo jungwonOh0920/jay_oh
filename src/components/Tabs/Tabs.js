@@ -10,10 +10,6 @@ const Tabs = ({children, active = 0, isMobile = false}) => {
     const [tabsData, setTabsData] = useState([])
     const [AreSectionsHidden, setAreSectionsHidden] = useState(false)
 
-    const sectionClassnames = classNames(
-        'section-titles-container'
-    )
-
     const sectionOuterClassnames = classNames(
         {'section-titles-mobile-outer-container': isMobile && !AreSectionsHidden},
         {'section-titles-outer-container': !isMobile},
@@ -39,10 +35,6 @@ const Tabs = ({children, active = 0, isMobile = false}) => {
     useEffect(() => {
         isMobile ? setAreSectionsHidden(true) : setAreSectionsHidden(false)
     }, [isMobile])
-
-    useEffect(() => {
-        console.log('check: ', AreSectionsHidden);
-    }, [AreSectionsHidden])
 
     const handleSectionTitleClick = (idx) => {
         setActiveTab(idx)
@@ -70,7 +62,7 @@ const Tabs = ({children, active = 0, isMobile = false}) => {
                             <Button type='img' onClick={() => {setAreSectionsHidden(true)}}><FiX /></Button>
                         </div> : null
                 }
-                <div className={sectionClassnames}>
+                <div className='section-titles-container'>
                     {
                         children.map((_, idx) => <button key={idx} className={`${idx === activeTab ? 'active' : ''}`} onClick={() => {handleSectionTitleClick(idx)}}>Section {idx + 1}</button>)
                     }
@@ -90,8 +82,10 @@ const Tabs = ({children, active = 0, isMobile = false}) => {
     )
 }
 
-Tabs.TabPane = function TabPane({children}) {
+const TabPane = ({children}) => {
     return <div>{children}</div>
 }
+
+Tabs.TabPane = TabPane
 
 export default Tabs
