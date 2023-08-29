@@ -79,7 +79,7 @@ First of all, I learned so much as I did this. It took me longer than I thought 
 * Something new - Component Composition with Dot Notation Exports. I've seen it before like StyledComponent but never created one yet. I guess I didn't have to build `Tabs` component in this way, but I wanted to try it and it worked! 😁
 * Style guide is needed. When I though about responsiveness for this, I was lost. I used the hamburger menu, but I'm pretty sure there would be a better way to do it. So, for better user experience, it's important to work with UI/UX designers.
 
-Thank you very much for your time and hope I hear back from ya! 🤙
+Thank you very much for your time and hope I can hear back soon from ya! 🤙
 
 [product-desktop]: src/assets/images/desktop.png
 [product-mobile1]: src/assets/images/mobile1.png
