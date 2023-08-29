@@ -68,7 +68,7 @@ Ex) `Tabs` component:
 ![Product tabs-usage][product-tabs-usage]
 
 5. `SectionContents`
-<br />There is Mario content component that is a combination of text, image, and other components. Also other content components are filled with placeholders. 
+<br />There is Mario content component that is a combination of text, image, and other components. Other content components are also filled with some placeholders and I added inline styling since it's just placeholders. 
 
 #### Comments
 First of all, I learned so much as I did this. It took me longer than I thought first. I learned 
